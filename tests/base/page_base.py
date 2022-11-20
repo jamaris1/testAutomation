@@ -17,11 +17,11 @@ class PageBase(object):
         return PageBase(driver=driver)
 
     def wait_for_page(self):
-        time.sleep(5)
+        time.sleep(3)
         self.wait.until(wait_for_page_to_load, True)
 
     def wait_for_element(self, locator):
-        time.sleep(5)
+        time.sleep(3)
         self.wait.until(EC.presence_of_element_located((By.XPATH, locator)))
         self.wait.until(EC.visibility_of_element_located((By.XPATH, locator)))
 
